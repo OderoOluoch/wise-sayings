@@ -10,6 +10,7 @@ import { QuoteFormComponent } from './components/quote-form/quote-form.component
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     QuoteFormComponent,
     AboutComponent,
     NavbarComponent,
+    NotFoundComponent,
   
   ],
   imports: [
