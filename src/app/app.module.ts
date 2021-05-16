@@ -9,6 +9,7 @@ import { DateCountPipe } from './res/date-count.pipe';
 import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './components/about/about.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AboutComponent } from './components/about/about.component';
     DateCountPipe,
     QuoteFormComponent,
     AboutComponent,
+    NavbarComponent,
   
   ],
   imports: [
