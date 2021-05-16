@@ -9,3 +9,12 @@ export class Quote {
     this.showDescription = false;
   }
 }
+
+
+// mainImageUrl:string;
+//     category:string;
+//     title:string;
+//     description:string;
+//     postDate:string;
+//     authorImageUrl:string;
+//     authorName:string;
