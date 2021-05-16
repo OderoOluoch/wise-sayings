@@ -1,10 +1,14 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new Goal</h2>
   <hr>
-  <form>
+  <form #goalForm='ngForm'>
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" required class="form-control" id="name">
+      <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
+      <div>
+        <p>Display {{ newQuote.name }}</p>
+      </div>
+      
     </div>
     <div class="form-group">
       <label for="description">Description</label>
