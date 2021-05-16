@@ -17,6 +17,9 @@ export class QuoteComponent implements OnInit {
     new Quote(6,'Plot my world domination plan','Cause I am an evil overlord'),
   ];
 
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {
