@@ -1,7 +1,6 @@
 export class Quote {
   showDescription: boolean;
-  upVote:number;
-  downVote:number;
+  
   constructor(
     public id: number,
     public mainImageUrl:string,
@@ -12,6 +11,8 @@ export class Quote {
     public authorImageUrl:string,
     public authorName:string,
     public quoteSubmitedBy:string,
+    public upVote:number,
+    public downVote:number,
   ) {
     this.showDescription = false;
     this.upVote = 0;

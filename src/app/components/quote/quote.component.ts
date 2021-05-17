@@ -17,7 +17,9 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 3, 14),
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
-      'Odero Oluoch'
+      'Odero Oluoch',
+      0,
+      0,
     ),
     new Quote(
       2,
@@ -28,7 +30,9 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 3, 14),
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
-      'Odero Oluoch'
+      'Odero Oluoch',
+      0,
+      0,
     ),
     new Quote(
       3,
@@ -39,7 +43,9 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 3, 14),
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
-      'Odero Oluoch'
+      'Odero Oluoch',
+      0,
+      0,
     ),
     new Quote(
       4,
@@ -50,7 +56,9 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 3, 14),
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
-      'Odero Oluoch'
+      'Odero Oluoch',
+      0,
+      0,
     ),
     new Quote(
       5,
@@ -61,7 +69,9 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 3, 14),
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
-      'Odero Oluoch'
+      'Odero Oluoch',
+      0,
+      0,
     ),
     new Quote(
       6,
@@ -72,7 +82,9 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 3, 14),
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
-      'Odero Oluoch'
+      'Odero Oluoch',
+      0,
+      0,
     ),
     new Quote(
       7,
@@ -83,7 +95,9 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 3, 14),
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
-      'Odero Oluoch'
+      'Odero Oluoch',
+      0,
+      0,
     ),
     new Quote(
       8,
@@ -94,7 +108,9 @@ export class QuoteComponent implements OnInit {
       new Date(2020, 3, 14),
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
-      'Odero Oluoch'
+      'Odero Oluoch',
+      0,
+      0,
     )
   ];
 
