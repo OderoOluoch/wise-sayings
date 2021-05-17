@@ -27,7 +27,7 @@
          </div>
          <h2 class="text-xl font-bold truncate mt-1">{{quote.title}}</h2>
          <button (click)='toggleDetails(i)'
-           class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
+           class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">Reveal</button>
          <div *ngIf='quote.showDescription'>
            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' [i]='i' (isComplete)='deleteQuote($event,i)'>
            </app-quote-detail>
