@@ -95,62 +95,7 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch'
-    ),
-    new Quote(
-      9,
-      'https://source.unsplash.com/e-S-Pe2EmrE/400x250',
-      'Life',
-      'A journey',
-      'The one who makes this work, makes this work terribley',
-      new Date(2020, 3, 14),
-      'https://source.unsplash.com/7YVZYZeITc8/30x30',
-      'Elon Musk',
-      'Odero Oluoch'
-    ),
-    new Quote(
-      10,
-      'https://source.unsplash.com/odxB5oIG_iA/400x250',
-      'Time',
-      'Everyone is running',
-      'The one who makes this work, makes this work terribley',
-      new Date(2020, 3, 14),
-      'https://source.unsplash.com/7YVZYZeITc8/30x30',
-      'Elon Musk',
-      'Odero Oluoch'
-    ),
-    new Quote(
-      11,
-      'https://source.unsplash.com/cGwfkwHmt98/400x250',
-      'Trust',
-      'Not so fast',
-      'The one who makes this work, makes this work terribley',
-      new Date(2020, 3, 14),
-      'https://source.unsplash.com/7YVZYZeITc8/30x30',
-      'Elon Musk',
-      'Odero Oluoch'
-    ),
-    new Quote(
-      12,
-      'https://source.unsplash.com/e-S-Pe2EmrE/400x250',
-      'Success',
-      'Open the path to your door',
-      'The one who makes this work, makes this work terribley',
-      new Date(2020, 3, 14),
-      'https://source.unsplash.com/7YVZYZeITc8/30x30',
-      'Elon Musk',
-      'Odero Oluoch'
-    ),
-    new Quote(
-      13,
-      'https://source.unsplash.com/EAvS-4KnGrk/400x250',
-      'Alone',
-      'The lone walf',
-      'The one who makes this work, makes this work terribley',
-      new Date(2020, 3, 14),
-      'https://source.unsplash.com/7YVZYZeITc8/30x30',
-      'Elon Musk',
-      'Odero Oluoch'
-    ),
+    )
   ];
 
   toggleDetails(index) {
