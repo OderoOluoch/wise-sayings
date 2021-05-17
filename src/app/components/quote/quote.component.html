@@ -12,36 +12,29 @@
 
 
 
-    
-        
-  
-      
-   
-<div class="grid grid-cols-3 p-8 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-  <div
-  *ngFor="let quote of quotes;let i = index">
-  <div class="rounded-xl shadow-xl">
-    <img class="rounded-t-xl  w-full h-36 object-cover" [src]="quote.mainImageUrl"> 
-    <div class="flex flex-col p-7">
-      <div class="flex flex-row">
-        <div class=" text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">{{quote.category}}</div>
-      </div>
-      <h2 class="text-xl font-bold truncate mt-1">{{quote.title}}</h2>
-      <button (click)='toggleDetails(i)' class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
-      <div *ngIf='quote.showDescription'>
-    <app-quote-detail *ngIf='quote.showDescription'[quote]='quote'  [i]='i'(isComplete)='deleteQuote($event,i)'></app-quote-detail>
-  </div>
-      <!-- <p class="text-base text-gray-600 mt-1">{{quote.description}}</p>
-      <div class="flex flex-row mt-5 items-center justify-start">
-        <img class="rounded-2xl mr-2" [src]="quote.authorImageUrl">
-        <p class="font-bold text-sm mr-2">{{quote.authorName}}</p>
-        <p class="text-gray-400 text-sm">On {{quote.postDate}}</p>
-      </div> -->
-    </div>
-  </div>
-</div>
-</div>
 
-<div>
+
+
+
+<div class="overscroll-auto">
+ <div class="grid p-8 gap-8  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-1">
+   <div *ngFor="let quote of quotes;let i = index">
+     <div class="rounded-xl shadow-xl">
+       <img class="rounded-t-xl  w-full h-36 object-cover" [src]="quote.mainImageUrl">
+       <div class="flex flex-col p-7">
+         <div class="flex flex-row">
+           <div class=" text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">{{quote.category}}</div>
+         </div>
+         <h2 class="text-xl font-bold truncate mt-1">{{quote.title}}</h2>
+         <button (click)='toggleDetails(i)'
+           class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
+         <div *ngIf='quote.showDescription'>
+           <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' [i]='i' (isComplete)='deleteQuote($event,i)'>
+           </app-quote-detail>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
   <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form> 
-</div> 
+</div>

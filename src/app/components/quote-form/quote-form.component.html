@@ -22,9 +22,7 @@
 </form>
 </div> -->
 
-
-
-<div class="flex w-full  justify-center items-center">
+<div class="flex w-full justify-center items-center">
   <div class="flex flex-col md:flex-row  space-y-8 md:space-y-0 bg-cyan-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden">
     <div class="flex flex-col space-y-8 justify-between">
       <div>
@@ -56,41 +54,57 @@
       </div>
     </div>
     <div class="relative">
-      <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -right-28 -top-28"></div>
-      <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-20"></div>
-      <div class="relative z-10 bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-90">
-        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="flex flex-col space-y-4">
-          <div>
-            <label for="" class="text-sm">Category</label>
-            <input type="text" placeholder="Enter Category E.G Motivational, Financial"
-              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
-          </div>
-          <div>
-            <label for="" class="text-sm">Enter Quote Title</label>
-            <input type="text" placeholder="A brief title of your category"
-              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
-          </div>
-          <div>
-            <label for="" class="text-sm">Enter name of Original Author</label>
-            <input type="text" placeholder="Name of Original Author"
-              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
-          </div>
-          <div>
-            <label for="" class="text-sm">Enter your name</label>
-            <input type="text" placeholder="Enter your first and Last name"
-              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
-          </div>
-          <div>
-            <label for="" class="text-sm">Message</label>
-            <textarea 
-              placeholder="The actual quote" 
-              rows="4"
-              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
-            </textarea>
-          </div>
-          <button class="inline-block self-end bg-cyan-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Send Message</button>
-        </form>
+      <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-20">
+        <div class="relative z-10 bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-90">
+          <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="flex flex-col space-y-4">
+            <div>
+              <label for="" class="text-sm">Category</label>
+              <input type="text" placeholder="Enter Category E.G Motivational." id="category" [(ngModel)]="newQuote.category" category="category" #category='ngModel' required
+                class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+              <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
+                <p>Title is required</p>
+              </div>
+            </div>
+            <div>
+              <label for="" class="text-sm">Enter Quote Title</label>
+              <input type="text" placeholder="A brief title of your category" id="title" [(ngModel)]="newQuote.title" title="title" #title='ngModel' required
+                class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+                <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
+                  <p>Title is required</p>
+                </div>
+            </div>
+            <div>
+              <label for="" class="text-sm">Enter name of Original Author</label>
+              <input type="text" placeholder="Name of Original Author" id="authorName" [(ngModel)]="newQuote.authorName" authorName="authorName" #authorName='ngModel' required
+                class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+                <div [hidden]="authorName.valid || authorName.pristine" class="alert alert-danger">
+                  <p>Title is required</p>
+                </div>
+            </div>
+            <div>
+              <label for="" class="text-sm">Enter your name</label>
+              <input type="text" placeholder="Enter your first and Last name" id="quoteSubmitedBy" [(ngModel)]="newQuote.quoteSubmitedBy" quoteSubmitedBy="quoteSubmitedBy" #quoteSubmitedBy='ngModel' required
+                class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+                <div [hidden]="quoteSubmitedBy.valid || quoteSubmitedBy.pristine" class="alert alert-danger">
+                  <p>Title is required</p>
+                </div>
+            </div>
+            <div>
+              <label for="" class="text-sm">Message</label>
+              <textarea 
+                placeholder="The actual quote" 
+                rows="4" id="description" [(ngModel)]="newQuote.description" description="description" #description='ngModel' required
+                class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+              </textarea>
+              <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                <p>Title is required</p>
+              </div>
+            </div>
+            <button class="inline-block self-end bg-cyan-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Send Message</button>
+          </form>
+        </div>
       </div>
+      
     </div>    
   </div>
 </div> 
