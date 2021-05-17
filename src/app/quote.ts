@@ -10,7 +10,6 @@ export class Quote {
     public postDate:Date,
     public authorImageUrl:string,
     public authorName:string,
-    public quoteSubmitedBy:string,
     public upVote:number,
     public downVote:number,
   ) {
