@@ -8,37 +8,19 @@ import { Quote } from '../../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(
-      1,
-      'Watch finding Nemo',
-      'Find an online version and watch merlin find his son',
-      new Date(2020, 3, 14)
-    ),
-    new Quote(
-      2,
-      'Buy Cookies',
-      'I have to buy cookies for the parrot',
-      new Date(2020, 3, 14)
-    ),
-    new Quote(
-      3,
-      'Get new Phone Case',
-      'Diana has her birthday coming up soon',
-      new Date(2020, 3, 14)
-    ),
-    new Quote(
-      4,
-      'Get Dog Food',
-      'Pupper likes expensive snacks',
-      new Date(2020, 3, 14)
-    ),
-    new Quote(5, 'Solve math homework', 'Damn Math', new Date(2020, 3, 14)),
-    new Quote(
-      6,
-      'Plot my world domination plan',
-      'Cause I am an evil overlord',
-      new Date(2020, 3, 14)
-    ),
+    new Quote(1,'https://source.unsplash.com/cGwfkwHmt98/400x250','Motivational','The Path to freedom','The one who makes this work, makes this work terribley', new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(2,'https://source.unsplash.com/cGwfkwHmt98/400x250','Educational','Open your mind','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(3,'https://source.unsplash.com/cGwfkwHmt98/400x250','Attitude','It is all within','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(4,'https://source.unsplash.com/cGwfkwHmt98/400x250','Friendship','Hold my Hand','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(5,'https://source.unsplash.com/cGwfkwHmt98/400x250','Happiness','Let me feel','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(6,'https://source.unsplash.com/cGwfkwHmt98/400x250','Inspirational','It will manifest','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(7,'https://source.unsplash.com/cGwfkwHmt98/400x250','Leadership','Personal Growth','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(8,'https://source.unsplash.com/cGwfkwHmt98/400x250','Love','Adam and Eve','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(9,'https://source.unsplash.com/cGwfkwHmt98/400x250','Life','A journey','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(10,'https://source.unsplash.com/cGwfkwHmt98/400x250','Time','Everyone is running','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(11,'https://source.unsplash.com/cGwfkwHmt98/400x250','Trust','Not so fast','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(12,'https://source.unsplash.com/cGwfkwHmt98/400x250','Success','Open the path to your door','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
+    new Quote(13,'https://source.unsplash.com/cGwfkwHmt98/400x250','Alone','The lone walf','The one who makes this work, makes this work terribley',new Date(2020, 3, 14),'imageurl.pge','Elon Musk','Odero Oluoch'),
   ];
 
   toggleDetails(index) {
@@ -48,7 +30,7 @@ export class QuoteComponent implements OnInit {
   deleteQuote(isComplete, index) {
     if (isComplete) {
       let toDelete = confirm(
-        `Are you sure you want to delete ${this.quotes[index].name}?`
+        `Are you sure you want to delete ${this.quotes[index].title}?`
       );
       if (toDelete) {
         this.quotes.splice(index, 1);

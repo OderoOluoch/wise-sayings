@@ -1,11 +1,11 @@
-<div class="container">
+<!-- <div class="container">
     <h1>MY GOALS</h1>
     <hr>
     <div class="row">
       <div class="col-md-6">
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
-            <h6 id={{i}} >{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h6>
+            <h6 id={{i}} >{{quote.title}} </h6>
             <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
           </div>
   
@@ -18,4 +18,25 @@
         <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
       </div>
     </div>
+</div> -->
+
+
+
+<div class="transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out"
+  *ngFor="let quote of quotes;let i = index">
+  <div class="rounded-xl shadow-xl">
+    <img class="rounded-t-xl  w-full h-36 object-cover" [src]="qoute.mainImageUrl">
+    <div class="flex flex-col p-7">
+      <div class="flex flex-row">
+        <div class=" text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">{{qoute.category}}</div>
+      </div>
+      <h2 class="text-xl font-bold truncate mt-1">{{qoute.title}}</h2>
+      <p class="text-base text-gray-600 mt-1">{{qoute.description}}</p>
+      <div class="flex flex-row mt-5 items-center justify-start">
+        <img class="rounded-2xl mr-2" [src]="data.authorImageUrl">
+        <p class="font-bold text-sm mr-2">{{qoute.authorName}}</p>
+        <p class="text-gray-400 text-sm">On {{qoute.postDate}}</p>
+      </div>
+    </div>
+  </div>
 </div>

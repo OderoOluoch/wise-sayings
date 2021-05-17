@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new Goal</h2>
   <hr>
-  <form (ngSubmit)='submitQuote()' #goalForm='ngForm'>
+  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
     <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          <p>Name is required</p>
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="newQuote.title" title="title" #title='ngModel' required>
+        <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+          <p>Title is required</p>
         </div>
     </div>
     <div class="form-group">
@@ -17,14 +17,7 @@
           <p>Description is required</p>
         </div>
     </div>
-    <div class="form-group">
-
-        <label for="complete">Completion</label>
-        <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
-        <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-          <p>Date is required</p>
-        </div>
-    </div>
+   
     <button type="submit" class="btn btn-success">Add Goal</button>
 </form>
 </div>
