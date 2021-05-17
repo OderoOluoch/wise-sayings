@@ -1,22 +1,3 @@
- <!-- <div *ngFor='let quote of quotes;let i = index'>
-  <h6 id={{i}} >{{quote.title}} </h6>
-  <button (click)='toggleDetails(i)' class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
-  <div *ngIf='quote.showDescription'>
-    <app-quote-detail *ngIf='quote.showDescription'[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
-  </div>
-  <div>
-    <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form> 
-  </div>
-</div>  -->
-
-
-
-
-
-
-
-
-
  <div class="grid p-8 gap-8  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-1">
    <div *ngFor="let quote of quotes;let i = index">
      <div class="rounded-xl shadow-xl">
@@ -38,4 +19,7 @@
  </div>
  <div>
   <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
- </div>
+ </div> 
+
+
+

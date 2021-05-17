@@ -17,10 +17,7 @@ import { Quote } from '../../quote';
 // public quoteSubmitedBy:string,
 // public description:string,
 // public upVote:number,
-// public downVote:number,
-
-
-
+// public downVote:number
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(
