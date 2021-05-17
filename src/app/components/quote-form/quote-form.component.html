@@ -59,7 +59,7 @@
       <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -right-28 -top-28"></div>
       <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-20"></div>
       <div class="relative z-10 bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-90">
-        <form (ngSubmit)='submitQuote(); quoteForm.resetForm()' #quoteForm='ngForm' class="flex flex-col space-y-4">
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="flex flex-col space-y-4">
           <div>
             <label for="" class="text-sm">Category</label>
             <input type="text" placeholder="Enter Category E.G Motivational." id="category" name="category" [(ngModel)]="newQuote.category" category="category" #category='ngModel' required
