@@ -6,11 +6,11 @@ export class Quote {
     public mainImageUrl:string,
     public category:string,
     public title:string,
-    public description:string,
     public postDate:Date,
     public authorImageUrl:string,
     public authorName:string,
     public quoteSubmitedBy:string,
+    public description:string,
     public upVote:number,
     public downVote:number,
   ) {

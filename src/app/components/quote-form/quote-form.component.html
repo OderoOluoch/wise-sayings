@@ -59,15 +59,25 @@
       <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -right-28 -top-28"></div>
       <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-20"></div>
       <div class="relative z-10 bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-90">
-        <form class="flex flex-col space-y-4">
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="flex flex-col space-y-4">
           <div>
             <label for="" class="text-sm">Category</label>
-            <input type="text" placeholder="Enter Category"
+            <input type="text" placeholder="Enter Category E.G Motivational, Financial"
               class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
           </div>
           <div>
             <label for="" class="text-sm">Enter Quote Title</label>
             <input type="text" placeholder="A brief title of your category"
+              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+          </div>
+          <div>
+            <label for="" class="text-sm">Enter name of Original Author</label>
+            <input type="text" placeholder="Name of Original Author"
+              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+          </div>
+          <div>
+            <label for="" class="text-sm">Enter your name</label>
+            <input type="text" placeholder="Enter your first and Last name"
               class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
           </div>
           <div>
@@ -81,8 +91,6 @@
           <button class="inline-block self-end bg-cyan-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Send Message</button>
         </form>
       </div>
-    </div>
-
-    
+    </div>    
   </div>
 </div> 
