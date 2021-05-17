@@ -54,7 +54,7 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       5,
-      'https://source.unsplash.com/cGwfkwHmt98/400x250',
+      'https://source.unsplash.com/e-S-Pe2EmrE/400x250',
       'Happiness',
       'Let me feel',
       'The one who makes this work, makes this work terribley',
@@ -76,7 +76,7 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       7,
-      'https://source.unsplash.com/cGwfkwHmt98/400x250',
+      'https://source.unsplash.com/EAvS-4KnGrk/400x250',
       'Leadership',
       'Personal Growth',
       'The one who makes this work, makes this work terribley',
@@ -87,7 +87,7 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       8,
-      'https://source.unsplash.com/cGwfkwHmt98/400x250',
+      'https://source.unsplash.com/e-S-Pe2EmrE/400x250',
       'Love',
       'Adam and Eve',
       'The one who makes this work, makes this work terribley',
@@ -98,7 +98,7 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       9,
-      'https://source.unsplash.com/cGwfkwHmt98/400x250',
+      'https://source.unsplash.com/e-S-Pe2EmrE/400x250',
       'Life',
       'A journey',
       'The one who makes this work, makes this work terribley',
@@ -109,7 +109,7 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       10,
-      'https://source.unsplash.com/cGwfkwHmt98/400x250',
+      'https://source.unsplash.com/odxB5oIG_iA/400x250',
       'Time',
       'Everyone is running',
       'The one who makes this work, makes this work terribley',
@@ -131,7 +131,7 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       12,
-      'https://source.unsplash.com/cGwfkwHmt98/400x250',
+      'https://source.unsplash.com/e-S-Pe2EmrE/400x250',
       'Success',
       'Open the path to your door',
       'The one who makes this work, makes this work terribley',
@@ -142,7 +142,7 @@ export class QuoteComponent implements OnInit {
     ),
     new Quote(
       13,
-      'https://source.unsplash.com/cGwfkwHmt98/400x250',
+      'https://source.unsplash.com/EAvS-4KnGrk/400x250',
       'Alone',
       'The lone walf',
       'The one who makes this work, makes this work terribley',

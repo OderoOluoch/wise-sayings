@@ -20,5 +20,8 @@
       <div class="flex flex-row mt-5 items-center justify-start">
         <img class="rounded-2xl mr-2" [src]="quote.authorImageUrl">
         <p class="font-bold text-sm mr-2">{{quote.authorName}}</p>
-        <p class="text-gray-400 text-sm">On {{quote.postDate}}</p>
-  </div>
+        <p class="text-gray-400 text-sm">On {{quote.postDate |date|uppercase}}</p>
+        <div>
+
+        </div>
+      </div>

@@ -1,4 +1,4 @@
-<!-- <div *ngFor='let quote of quotes;let i = index'>
+ <!-- <div *ngFor='let quote of quotes;let i = index'>
   <h6 id={{i}} >{{quote.title}} </h6>
   <button (click)='toggleDetails(i)' class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
   <div *ngIf='quote.showDescription'>
@@ -7,7 +7,7 @@
   <div>
     <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form> 
   </div>
-</div> -->
+</div>  -->
 
 
 
@@ -18,8 +18,7 @@
       
    
 <div class="grid grid-cols-3 p-8 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
-  <div class="transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out"
+  <div
   *ngFor="let quote of quotes;let i = index">
   <div class="rounded-xl shadow-xl">
     <img class="rounded-t-xl  w-full h-36 object-cover" [src]="quote.mainImageUrl">
@@ -29,6 +28,9 @@
       </div>
       <h2 class="text-xl font-bold truncate mt-1">{{quote.title}}</h2>
       <button (click)='toggleDetails(i)' class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
+      <div *ngIf='quote.showDescription'>
+    <app-quote-detail *ngIf='quote.showDescription'[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+  </div>
       <!-- <p class="text-base text-gray-600 mt-1">{{quote.description}}</p>
       <div class="flex flex-row mt-5 items-center justify-start">
         <img class="rounded-2xl mr-2" [src]="quote.authorImageUrl">
@@ -40,3 +42,6 @@
 </div>
 </div>
 
+<div>
+  <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form> 
+</div> 
