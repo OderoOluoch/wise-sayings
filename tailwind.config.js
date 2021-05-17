@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 const { guessProductionMode } = require("@ngneat/tailwind");
 
 module.exports = {
@@ -10,7 +12,12 @@ module.exports = {
     },
     darkMode: false, // or 'media' or 'class'
     theme: {
-      extend: {},
+      extend: {
+        colors:{
+          'cyan':colors.cyan,
+          'teal':colors.teal
+        }
+      },
     },
     variants: {
       extend: {},

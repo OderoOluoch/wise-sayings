@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <h2 class="text-center">Create a new Goal</h2>
   <hr>
   <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
@@ -20,4 +20,73 @@
    
     <button type="submit" class="btn btn-success">Add Goal</button>
 </form>
+</div> -->
+
+
+
+<div class="flex w-full min-h-screen justify-center items-center">
+  <div class="flex flex-col md:flex-row  space-y-8 md:space-y-0 bg-cyan-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden">
+    <div class="flex flex-col space-y-8 justify-between">
+      <div>
+        <h1 class="font-bold text-4xl tracking-wide">Contact Us</h1>
+        <p class="pt-2 text-cyan-100 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam at eaque
+          eveniet repellendus </p>
+      </div>
+      <div class="flex flex-col space-y-6">
+        <div class="inline-flex space-x-2 items-center">
+          <ion-icon name="call-sharp" class="text-teal-300 text-xl"></ion-icon>
+          <span>+(254)-725-29-77-23</span>
+        </div>
+        <div class="inline-flex space-x-2 items-center">
+          <ion-icon name="mail-sharp" class="text-teal-300 text-xl"></ion-icon>
+          <span>contact@wisesayings.com</span>
+        </div>
+        <div class="inline-flex space-x-2 items-center">
+          <ion-icon name="location-sharp" class="text-teal-300 text-xl"></ion-icon>
+          <span>Nairobi, Kenya.</span>
+        </div>
+      </div>
+      <div class="flex space-x-4 text-lg">
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-linkedin"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+
+        <!-- <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a> -->
+
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -right-28 -top-28"></div>
+      <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-20"></div>
+      <div class="relative z-10 bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-90">
+        <form class="flex flex-col space-y-4">
+          <div>
+            <label for="" class="text-sm">Your Name</label>
+            <input type="text" placeholder="Your name"
+              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+          </div>
+          <div>
+            <label for="" class="text-sm">Your Email</label>
+            <input type="email" placeholder="Your Email"
+              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+          </div>
+          <div>
+            <label for="" class="text-sm">Message</label>
+            <textarea 
+              placeholder="Your Email" 
+              rows="4"
+              class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+            </textarea>
+          </div>
+          <button class="inline-block self-end bg-cyan-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    
+  </div>
 </div>
