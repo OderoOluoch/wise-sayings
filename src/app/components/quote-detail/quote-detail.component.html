@@ -1,2 +1,24 @@
-<p>{{quote.description}}</p>
-<button (click)= 'quoteDelete(true)'>Delete quote</button>
+<!-- <h6>{{quote.description}} </h6>
+<h6>{{quote.authorName}} </h6>
+<button (click)= 'quoteDelete(true)' class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 rounded">Delete quote</button> -->
+
+<!-- <div class="flex flex-col p-7">
+    <div class="flex flex-row">
+      <div class=" text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">{{quote.category}}</div>
+    </div>
+    <h2 class="text-xl font-bold truncate mt-1">{{quote.title}}</h2>
+    <p class="text-base text-gray-600 mt-1">{{quote.description}}</p>
+    <div class="flex flex-row mt-5 items-center justify-start">
+      <img class="rounded-2xl mr-2" [src]="quote.authorImageUrl">
+      <p class="font-bold text-sm mr-2">{{quote.authorName}}</p>
+      <p class="text-gray-400 text-sm">On {{quote.postDate}}</p>
+    </div>
+  </div> -->
+
+
+  <p class="text-base text-gray-600 mt-1">{{quote.description}}</p>
+      <div class="flex flex-row mt-5 items-center justify-start">
+        <img class="rounded-2xl mr-2" [src]="quote.authorImageUrl">
+        <p class="font-bold text-sm mr-2">{{quote.authorName}}</p>
+        <p class="text-gray-400 text-sm">On {{quote.postDate}}</p>
+  </div>

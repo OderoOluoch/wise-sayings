@@ -1,42 +1,42 @@
-<!-- <div class="container">
-    <h1>MY GOALS</h1>
-    <hr>
-    <div class="row">
-      <div class="col-md-6">
-        <div *ngFor='let quote of quotes;let i = index'>
-          <div>
-            <h6 id={{i}} >{{quote.title}} </h6>
-            <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-          </div>
-  
-          <div *ngIf='quote.showDescription'>
-            <app-quote-detail *ngIf='quote.showDescription'[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
-      </div>
-    </div>
+<!-- <div *ngFor='let quote of quotes;let i = index'>
+  <h6 id={{i}} >{{quote.title}} </h6>
+  <button (click)='toggleDetails(i)' class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
+  <div *ngIf='quote.showDescription'>
+    <app-quote-detail *ngIf='quote.showDescription'[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+  </div>
+  <div>
+    <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form> 
+  </div>
 </div> -->
 
 
 
-<div class="transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out"
+
+    
+        
+  
+      
+   
+<div class="grid grid-cols-3 p-8 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+  <div class="transition-transform transform hover:scale-105 cursor-pointer duration-300 ease-in-out"
   *ngFor="let quote of quotes;let i = index">
   <div class="rounded-xl shadow-xl">
-    <img class="rounded-t-xl  w-full h-36 object-cover" [src]="qoute.mainImageUrl">
+    <img class="rounded-t-xl  w-full h-36 object-cover" [src]="quote.mainImageUrl">
     <div class="flex flex-col p-7">
       <div class="flex flex-row">
-        <div class=" text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">{{qoute.category}}</div>
+        <div class=" text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">{{quote.category}}</div>
       </div>
-      <h2 class="text-xl font-bold truncate mt-1">{{qoute.title}}</h2>
-      <p class="text-base text-gray-600 mt-1">{{qoute.description}}</p>
+      <h2 class="text-xl font-bold truncate mt-1">{{quote.title}}</h2>
+      <button (click)='toggleDetails(i)' class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
+      <!-- <p class="text-base text-gray-600 mt-1">{{quote.description}}</p>
       <div class="flex flex-row mt-5 items-center justify-start">
-        <img class="rounded-2xl mr-2" [src]="data.authorImageUrl">
-        <p class="font-bold text-sm mr-2">{{qoute.authorName}}</p>
-        <p class="text-gray-400 text-sm">On {{qoute.postDate}}</p>
-      </div>
+        <img class="rounded-2xl mr-2" [src]="quote.authorImageUrl">
+        <p class="font-bold text-sm mr-2">{{quote.authorName}}</p>
+        <p class="text-gray-400 text-sm">On {{quote.postDate}}</p>
+      </div> -->
     </div>
   </div>
 </div>
+</div>
+

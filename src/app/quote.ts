@@ -18,12 +18,3 @@ export class Quote {
     this.downVote=0;
   }
 }
-
-
-// mainImageUrl:string;
-//     category:string;
-//     title:string;
-//     description:string;
-//     postDate:string;
-//     authorImageUrl:string;
-//     authorName:string;
