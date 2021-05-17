@@ -18,8 +18,8 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch',
-      0,
-      0,
+      179,
+      934,
     ),
     new Quote(
       2,
@@ -31,8 +31,8 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch',
-      0,
-      0,
+      253,
+      56,
     ),
     new Quote(
       3,
@@ -44,8 +44,8 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch',
-      0,
-      0,
+      56,
+      7,
     ),
     new Quote(
       4,
@@ -57,8 +57,8 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch',
-      0,
-      0,
+      803,
+      3,
     ),
     new Quote(
       5,
@@ -70,8 +70,8 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch',
-      0,
-      0,
+      79,
+      158,
     ),
     new Quote(
       6,
@@ -83,8 +83,8 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch',
-      0,
-      0,
+      234,
+      9,
     ),
     new Quote(
       7,
@@ -96,8 +96,8 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch',
-      0,
-      0,
+      456,
+      61,
     ),
     new Quote(
       8,
@@ -109,8 +109,8 @@ export class QuoteComponent implements OnInit {
       'https://source.unsplash.com/7YVZYZeITc8/30x30',
       'Elon Musk',
       'Odero Oluoch',
-      0,
-      0,
+      348,
+      19,
     )
   ];
 
