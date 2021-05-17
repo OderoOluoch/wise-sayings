@@ -29,7 +29,7 @@
       <h2 class="text-xl font-bold truncate mt-1">{{quote.title}}</h2>
       <button (click)='toggleDetails(i)' class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">View More</button>
       <div *ngIf='quote.showDescription'>
-    <app-quote-detail *ngIf='quote.showDescription'[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+    <app-quote-detail *ngIf='quote.showDescription'[quote]='quote'  [i]='i'(isComplete)='deleteQuote($event,i)'></app-quote-detail>
   </div>
       <!-- <p class="text-base text-gray-600 mt-1">{{quote.description}}</p>
       <div class="flex flex-row mt-5 items-center justify-start">

@@ -16,6 +16,29 @@ export class QuoteDetailComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
+  liked:boolean = true;
+ 
+  toggleUpVote() {
+    if(this.liked){
+      this.quote.upVote++
+      this.liked= false;
+    }else{
+      this.quote.upVote --;
+      this.liked=true;
+    }
+  }
+  unliked:boolean = true;
+  toggleDownVote() {
+    if(this.unliked){
+      this.quote.downVote++;
+      this.unliked= false;
+    }else{
+      this.quote.downVote --;
+      this.unliked=true;
+    }
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
