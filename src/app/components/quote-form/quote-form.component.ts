@@ -11,9 +11,11 @@ export class QuoteFormComponent implements OnInit {
   newQuote = new Quote(0,'https://source.unsplash.com/EAvS-4KnGrk/400x250','','',new Date(),'https://source.unsplash.com/7YVZYZeITc8/30x30','','','',0,0)
   @Output() addQuote = new EventEmitter<Quote>()
 
-  submitQuote(){
+  onSubmit(){
     this.addQuote.emit(this.newQuote)
+    console.log("The form has been submited")
   }
+
 
   constructor() { }
 

@@ -25,7 +25,7 @@
 
 
 <div class="flex w-full  justify-center items-center">
-  <div class="flex flex-col md:flex-row  space-y-8 md:space-y-0 bg-cyan-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden">
+  <div class="flex flex-col md:flex-row  space-y-10 md:space-y-0 bg-cyan-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden">
     <div class="flex flex-col space-y-8 justify-between">
       <div>
         <h1 class="font-bold text-4xl tracking-wide">Add A Quote</h1>
@@ -37,7 +37,7 @@
       <div class="flex flex-col space-y-6">
         <div class="inline-flex space-x-2 items-center">
           <ion-icon name="call-sharp" class="text-teal-300 text-xl"></ion-icon>
-          <span>+(254)-725-29-77-23</span>
+          <span>+(254)-712-34-56-78</span>
         </div>
         <div class="inline-flex space-x-2 items-center">
           <ion-icon name="mail-sharp" class="text-teal-300 text-xl"></ion-icon>
@@ -59,7 +59,7 @@
       <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -right-28 -top-28"></div>
       <div class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-20"></div>
       <div class="relative z-10 bg-white rounded-xl shadow-lg p-8 text-gray-600 md:w-90">
-        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' class="flex flex-col space-y-4">
+        <form  (ngSubmit)='onSubmit()' #quoteForm='ngForm'  class="flex flex-col space-y-4">
           <div>
             <label for="" class="text-sm">Category</label>
             <input type="text" placeholder="Enter Category E.G Motivational." id="category" name="category" [(ngModel)]="newQuote.category" category="category" #category='ngModel' required

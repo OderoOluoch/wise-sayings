@@ -7,17 +7,6 @@ import { Quote } from '../../quote';
   styleUrls: ['./quote.component.css'],
 })
 
-// public id: number,
-// public mainImageUrl:string,
-// public category:string,
-// public title:string,
-// public postDate:Date,
-// public authorImageUrl:string,
-// public authorName:string,
-// public quoteSubmitedBy:string,
-// public description:string,
-// public upVote:number,
-// public downVote:number
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(
@@ -144,7 +133,7 @@ export class QuoteComponent implements OnInit {
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
-    quote.completeDate = new Date(quote.completeDate);
+    // quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
   }
 
