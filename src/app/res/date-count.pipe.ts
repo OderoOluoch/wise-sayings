@@ -5,95 +5,39 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(value: any) {
-    let today: Date = new Date();
-    let todayWithNoTime: any = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      today.getDate()
-    );
-    var dateDifference = Math.abs(value - todayWithNoTime);
-    const SECONDS_IN_DAY = 86400;
-    const SECONDS_IN_HOUR = 3600;
-    const SECONDS_IN_MIN = 60;
-    var dateDifferenceSeconds = dateDifference * 0.001;
-    var dateCounter = dateDifferenceSeconds / SECONDS_IN_DAY;
+  transform(input:any){
+    var current = new Date().valueOf();
+    var msPerMinute = 60 * 1000;
+    var msPerHour = msPerMinute * 60;
+    var msPerDay = msPerHour * 24;
+    var msPerMonth = msPerDay * 30;
+    var msPerYear = msPerDay * 365;
 
-    if (dateCounter > 30 && value < todayWithNoTime) {
-      var months = Math.trunc(dateCounter / 30);
-      var daysRemainder = dateCounter % 30;
-      if (months > 1) {
-        var sForMonth = 's';
-      } else if (months === 1) {
-        var sForMonth = '';
-      }
-      if (daysRemainder > 1) {
-        var sForDays = 's';
-      } else if (daysRemainder === 1) {
-        var sForDays = '';
-      }
-      return `${months} month${sForMonth}, ${daysRemainder} day${sForDays}`;
-    } else if (dateCounter === 30) {
-      return '1 month';
-    } else if (dateCounter < 30 && dateCounter > 1) {
-      return `${dateCounter} days`;
-    } else if (dateCounter === 1) {
-      return '1 day';
-    } else if (dateCounter < 1) {
-      var hours = Math.trunc(dateDifferenceSeconds / SECONDS_IN_HOUR);
-      if (hours > 1) {
-        return `${hours} hours`;
-      } else if (hours === 1) {
-        return '1 hour';
-      } else if (hours < 1) {
-        var minutes = Math.trunc(dateDifferenceSeconds / SECONDS_IN_MIN);
-        if (minutes > 1) {
-          return `${minutes} minutes`;
-        } else if (minutes === 1) {
-          return '1 minute';
-        } else if (minutes < 1) {
-          return 'Seconds';
-        }
-      }
+    var elapsed = current - input;
+
+    if (elapsed < msPerMinute) {
+        return Math.round(elapsed / 1000) + ' seconds ago';
+    }
+
+    else if (elapsed < msPerHour) {
+        return Math.round(elapsed / msPerMinute) + ' minutes ago';
+    }
+
+    else if (elapsed < msPerDay) {
+        return Math.round(elapsed / msPerHour) + ' hours ago';
+    }
+
+    else if (elapsed < msPerMonth) {
+        return 'approximately ' + Math.round(elapsed / msPerDay) + ' days ago';
+    }
+
+    else if (elapsed < msPerYear) {
+        return 'approximately ' + Math.round(elapsed / msPerMonth) + ' months ago';
+    }
+
+    else {
+        console.log('inside the if condition', elapsed);
+        return 'approximately ' + Math.round(elapsed / msPerYear) + ' years ago';
     }
   }
-
-//   transform(inputDate:any){
-//     var current = new Date().valueOf();
-//     var input = new Date(parseInt(inputDate)).valueOf();
-//     var msPerMinute = 60 * 1000;
-//     var msPerHour = msPerMinute * 60;
-//     var msPerDay = msPerHour * 24;
-//     var msPerMonth = msPerDay * 30;
-//     var msPerYear = msPerDay * 365;
-
-//     var elapsed = current - input;
-
-//     if (elapsed < msPerMinute) {
-//         return Math.round(elapsed / 1000) + ' seconds ago';
-//     }
-
-//     else if (elapsed < msPerHour) {
-//         return Math.round(elapsed / msPerMinute) + ' minutes ago';
-//     }
-
-//     else if (elapsed < msPerDay) {
-//         return Math.round(elapsed / msPerHour) + ' hours ago';
-//     }
-
-//     else if (elapsed < msPerMonth) {
-//         return 'approximately ' + Math.round(elapsed / msPerDay) + ' days ago';
-//     }
-
-//     else if (elapsed < msPerYear) {
-//         return 'approximately ' + Math.round(elapsed / msPerMonth) + ' months ago';
-//     }
-
-//     else {
-//         console.log('inside the if condition', elapsed);
-//         return 'approximately ' + Math.round(elapsed / msPerYear) + ' years ago';
-//     }
-
-// }
-  
 }

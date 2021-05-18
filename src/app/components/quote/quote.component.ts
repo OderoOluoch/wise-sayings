@@ -142,7 +142,7 @@ export class QuoteComponent implements OnInit {
     var max = Math.max(...this.quotes.map(({ upVote }) => upVote)),
     object = this.quotes.find(({ upVote }) => upVote === max);
 
-    alert (`The quote with highest likes it of the title "${object.title}", saying "${object.description}", with ${object.upVote} vote count`);
+    alert (`The quote with highest likes it of the title "${object.title}", saying "${object.description}", by ${object.authorName}, with ${object.upVote} vote count`);
   }
 
   constructor() {}
