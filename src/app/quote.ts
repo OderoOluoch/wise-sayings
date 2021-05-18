@@ -15,7 +15,5 @@ export class Quote {
     public downVote:number,
   ) {
     this.showDescription = false;
-    // this.upVote = 0;
-    // this.downVote=0;
   }
 }
