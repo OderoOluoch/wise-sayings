@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { isNgTemplate } from '@angular/compiler';
+import { Component, IterableDiffers, OnInit } from '@angular/core';
 import { Quote } from '../../quote';
 
 @Component({
@@ -135,6 +136,13 @@ export class QuoteComponent implements OnInit {
     quote.id = quoteLength + 1;
     // quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
+  }
+
+  getQuoteWithHighestVote(){
+    var max = Math.max(...this.quotes.map(({ upVote }) => upVote)),
+    object = this.quotes.find(({ upVote }) => upVote === max);
+
+    alert (`The quote with highest likes it of the title "${object.title}", saying "${object.description}", with ${object.upVote} vote count`);
   }
 
   constructor() {}

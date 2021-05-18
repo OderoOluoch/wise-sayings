@@ -1,5 +1,12 @@
+<button 
+class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded"
+(click)="getQuoteWithHighestVote()">See quote with higest likes</button>
+<!-- <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative my-5" role="alert">
+  <strong class="font-bold">Alert!</strong>
+  <span class="block sm:inline">Please update your user profile.</span>
+</div> -->
 <div class="grid p-8 gap-8  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-1">
-   <div *ngFor="let quote of quotes;let i = index">
+  <div *ngFor="let quote of quotes;let i = index">
      <div class="rounded-xl shadow-xl">
        <img class="rounded-t-xl  w-full h-36 object-cover" [src]="quote.mainImageUrl">
        <div class="flex flex-col p-7">
